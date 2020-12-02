@@ -121,7 +121,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func update(_ currentTime: TimeInterval) {
-        if ball.position.y < player.position.y - 20 {
+        if ball.position.y < player.position.y - 100 || ball.position.y > enemy.position.y + 100{
             restart()
         }
 
