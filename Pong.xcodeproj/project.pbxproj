@@ -15,6 +15,9 @@
 		76D743892571F9560028EFF3 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D743882571F9560028EFF3 /* GameScene.swift */; };
 		76D7438B2571F9560028EFF3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D7438A2571F9560028EFF3 /* GameViewController.swift */; };
 		76D743902571F9570028EFF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76D7438F2571F9570028EFF3 /* Assets.xcassets */; };
+		76F38CE2257DCA8C00A722A2 /* MultiplayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F38CE1257DCA8C00A722A2 /* MultiplayerViewController.swift */; };
+		76F38CEC257DCCD700A722A2 /* MultiplayerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F38CEB257DCCD700A722A2 /* MultiplayerScene.swift */; };
+		76F38CF0257DCD8800A722A2 /* Global_Data_Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F38CEF257DCD8800A722A2 /* Global_Data_Types.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		76D7438A2571F9560028EFF3 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		76D7438F2571F9570028EFF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76D743912571F9570028EFF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76F38CE1257DCA8C00A722A2 /* MultiplayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplayerViewController.swift; sourceTree = "<group>"; };
+		76F38CEB257DCCD700A722A2 /* MultiplayerScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplayerScene.swift; sourceTree = "<group>"; };
+		76F38CEF257DCD8800A722A2 /* Global_Data_Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global_Data_Types.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,16 +75,43 @@
 		76D743812571F9560028EFF3 /* Pong */ = {
 			isa = PBXGroup;
 			children = (
+				76F38CEE257DCD6300A722A2 /* Global_Data_Types */,
 				76D743822571F9560028EFF3 /* AppDelegate.swift */,
-				76D743842571F9560028EFF3 /* GameScene.sks */,
-				76D743882571F9560028EFF3 /* GameScene.swift */,
+				76F38CE4257DCC1F00A722A2 /* Singleplayer */,
 				76D2A0F02576D668004D05EE /* MenuViewController.swift */,
+				76F38CE9257DCC5500A722A2 /* Multiplayer */,
 				76D2A0EE2576ADCD004D05EE /* GameObjects */,
-				76D7438A2571F9560028EFF3 /* GameViewController.swift */,
 				76D7438F2571F9570028EFF3 /* Assets.xcassets */,
 				76D743912571F9570028EFF3 /* Info.plist */,
 			);
 			path = Pong;
+			sourceTree = "<group>";
+		};
+		76F38CE4257DCC1F00A722A2 /* Singleplayer */ = {
+			isa = PBXGroup;
+			children = (
+				76D743842571F9560028EFF3 /* GameScene.sks */,
+				76D743882571F9560028EFF3 /* GameScene.swift */,
+				76D7438A2571F9560028EFF3 /* GameViewController.swift */,
+			);
+			path = Singleplayer;
+			sourceTree = "<group>";
+		};
+		76F38CE9257DCC5500A722A2 /* Multiplayer */ = {
+			isa = PBXGroup;
+			children = (
+				76F38CE1257DCA8C00A722A2 /* MultiplayerViewController.swift */,
+				76F38CEB257DCCD700A722A2 /* MultiplayerScene.swift */,
+			);
+			path = Multiplayer;
+			sourceTree = "<group>";
+		};
+		76F38CEE257DCD6300A722A2 /* Global_Data_Types */ = {
+			isa = PBXGroup;
+			children = (
+				76F38CEF257DCD8800A722A2 /* Global_Data_Types.swift */,
+			);
+			path = Global_Data_Types;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,11 +184,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				76D743892571F9560028EFF3 /* GameScene.swift in Sources */,
+				76F38CF0257DCD8800A722A2 /* Global_Data_Types.swift in Sources */,
 				76D2A0F12576D668004D05EE /* MenuViewController.swift in Sources */,
 				76D2A0E92576A506004D05EE /* Paddle.swift in Sources */,
+				76F38CE2257DCA8C00A722A2 /* MultiplayerViewController.swift in Sources */,
 				76D2A0EC2576AB1F004D05EE /* Ball.swift in Sources */,
 				76D7438B2571F9560028EFF3 /* GameViewController.swift in Sources */,
 				76D743832571F9560028EFF3 /* AppDelegate.swift in Sources */,
+				76F38CEC257DCCD700A722A2 /* MultiplayerScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

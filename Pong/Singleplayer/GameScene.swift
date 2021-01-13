@@ -8,14 +8,6 @@
 import SpriteKit
 import GameplayKit
 
-enum NodeCategory: UInt32 {
-    case player = 1
-    case enemy = 2
-    case ball = 4
-    case border = 8
-}
-
-
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var player : Paddle!
@@ -31,19 +23,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func sceneDidLoad() {
-        player = Paddle(color: .blue, size: CGSize(width: (self.scene?.size.width)!/3, height: (self.scene?.size.height)!/30))
-        player.name = "Player"
-        player.position = CGPoint(x: (self.scene?.size.width)!/2, y: 150)
-        
-        enemy = Paddle(color: .red, size:  CGSize(width: (self.scene?.size.width)!/3, height: (self.scene?.size.height)!/30))
-        enemy.name = "Enemy"
-        enemy.position = CGPoint(x: (self.scene?.size.width)!/2, y: (self.scene?.size.height)! - 150)
-        
-        ball = Ball(circleOfRadius: 25)
-        ball.name = "Ball"
-        ball.position = CGPoint(x: (self.scene?.size.width)!/2, y: (self.scene?.size.height)!/2)
-        
+        scene?.backgroundColor = .white
     }
+
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if isPaused {
@@ -130,6 +112,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     override func didMove(to view: SKView) {
+        player = Paddle(color: .blue, size: CGSize(width: (self.scene?.size.width)!/3, height: (self.scene?.size.height)!/30))
+        player.name = "Player"
+        player.position = CGPoint(x: (self.scene?.size.width)!/2, y: 150)
+        
+        enemy = Paddle(color: .red, size:  CGSize(width: (self.scene?.size.width)!/3, height: (self.scene?.size.height)!/30))
+        enemy.name = "Enemy"
+        enemy.position = CGPoint(x: (self.scene?.size.width)!/2, y: (self.scene?.size.height)! - 150)
+        
+        ball = Ball(circleOfRadius: 25)
+        ball.name = "Ball"
+        ball.position = CGPoint(x: (self.scene?.size.width)!/2, y: (self.scene?.size.height)!/2)
+        
         isPaused = true
         
         addChild(player)
@@ -155,7 +149,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         //Check if weak self is necessary
-        Timer.scheduledTimer(withTimeInterval: 0.25, repeats: true) { [self]_ in
+        Timer.scheduledTimer(withTimeInterval: 0.10, repeats: true) { [self]_ in
             var xPos = ball.position.x
             
             if ball.position.x >= (self.scene?.size.width)! - enemy.size.width/2 {
