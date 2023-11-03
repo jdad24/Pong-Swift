@@ -14,6 +14,8 @@
 		7D99E9F22AE43A2C005CADB4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D99E9F12AE43A2C005CADB4 /* Preview Assets.xcassets */; };
 		7D99EA142AE5CC1B005CADB4 /* PaddleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99EA132AE5B8CA005CADB4 /* PaddleNode.swift */; };
 		7D99EA152AE5CC1E005CADB4 /* BallNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99EA122AE5B8C7005CADB4 /* BallNode.swift */; };
+		7DA2BCCA2AF4A2F0000B8DDC /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA2BCC92AF4A2F0000B8DDC /* PlayView.swift */; };
+		7DA2BCCC2AF4A515000B8DDC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA2BCCB2AF4A515000B8DDC /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		7D99EA0C2AE43D22005CADB4 /* Global_Data_Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global_Data_Types.swift; sourceTree = "<group>"; };
 		7D99EA122AE5B8C7005CADB4 /* BallNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallNode.swift; sourceTree = "<group>"; };
 		7D99EA132AE5B8CA005CADB4 /* PaddleNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddleNode.swift; sourceTree = "<group>"; };
+		7DA2BCC92AF4A2F0000B8DDC /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
+		7DA2BCCB2AF4A515000B8DDC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				7D99E9EC2AE43A2B005CADB4 /* ContentView.swift */,
+				7DA2BCC92AF4A2F0000B8DDC /* PlayView.swift */,
+				7DA2BCCB2AF4A515000B8DDC /* SettingsView.swift */,
 				7D02291D2AE63DAE007D29D1 /* GameScene.swift */,
 				7D99EA112AE5B8BF005CADB4 /* Nodes */,
 			);
@@ -172,6 +178,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DA2BCCC2AF4A515000B8DDC /* SettingsView.swift in Sources */,
+				7DA2BCCA2AF4A2F0000B8DDC /* PlayView.swift in Sources */,
 				7D02291E2AE63DAE007D29D1 /* GameScene.swift in Sources */,
 				7D99EA142AE5CC1B005CADB4 /* PaddleNode.swift in Sources */,
 				7D99E9ED2AE43A2B005CADB4 /* ContentView.swift in Sources */,
