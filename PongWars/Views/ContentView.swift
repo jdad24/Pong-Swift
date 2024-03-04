@@ -7,13 +7,15 @@
 
 import SwiftUI
 import Foundation
+import GameKit
 
 struct ContentView: View {
-    @State private var presentGame = false
+    @State private var presentPracticeMode = false
+    @State private var presentMultiplayer = false
     
     var body: some View {
         TabView {
-            PlayView(presentGame: $presentGame)
+            MainView(presentPracticeMode: $presentPracticeMode, presentMultiplayer: $presentMultiplayer)
                 .tabItem { Label("Play", systemImage: "gamecontroller.fill") }
             SettingsView()
                 .tabItem { Label("Settings", systemImage: "gear.circle.fill") }

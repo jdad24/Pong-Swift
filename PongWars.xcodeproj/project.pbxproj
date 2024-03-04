@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7D02291E2AE63DAE007D29D1 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D02291D2AE63DAE007D29D1 /* GameScene.swift */; };
+		7D02291E2AE63DAE007D29D1 /* PracticeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D02291D2AE63DAE007D29D1 /* PracticeScene.swift */; };
 		7D99E9EB2AE43A2B005CADB4 /* PongWarsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99E9EA2AE43A2B005CADB4 /* PongWarsApp.swift */; };
 		7D99E9ED2AE43A2B005CADB4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99E9EC2AE43A2B005CADB4 /* ContentView.swift */; };
 		7D99E9EF2AE43A2C005CADB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D99E9EE2AE43A2C005CADB4 /* Assets.xcassets */; };
 		7D99E9F22AE43A2C005CADB4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D99E9F12AE43A2C005CADB4 /* Preview Assets.xcassets */; };
 		7D99EA142AE5CC1B005CADB4 /* PaddleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99EA132AE5B8CA005CADB4 /* PaddleNode.swift */; };
 		7D99EA152AE5CC1E005CADB4 /* BallNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99EA122AE5B8C7005CADB4 /* BallNode.swift */; };
-		7DA2BCCA2AF4A2F0000B8DDC /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA2BCC92AF4A2F0000B8DDC /* PlayView.swift */; };
+		7DA2BCCA2AF4A2F0000B8DDC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA2BCC92AF4A2F0000B8DDC /* MainView.swift */; };
 		7DA2BCCC2AF4A515000B8DDC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA2BCCB2AF4A515000B8DDC /* SettingsView.swift */; };
+		7DFF7E4D2B63553B001B77B0 /* GCManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF7E4C2B63553B001B77B0 /* GCManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7D02291D2AE63DAE007D29D1 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		7D02291D2AE63DAE007D29D1 /* PracticeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeScene.swift; sourceTree = "<group>"; };
+		7D4619812B1D13CD00B86725 /* PongWars.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PongWars.entitlements; sourceTree = "<group>"; };
 		7D99E9E72AE43A2B005CADB4 /* PongWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PongWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D99E9EA2AE43A2B005CADB4 /* PongWarsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PongWarsApp.swift; sourceTree = "<group>"; };
 		7D99E9EC2AE43A2B005CADB4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -28,8 +30,9 @@
 		7D99EA0C2AE43D22005CADB4 /* Global_Data_Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global_Data_Types.swift; sourceTree = "<group>"; };
 		7D99EA122AE5B8C7005CADB4 /* BallNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallNode.swift; sourceTree = "<group>"; };
 		7D99EA132AE5B8CA005CADB4 /* PaddleNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddleNode.swift; sourceTree = "<group>"; };
-		7DA2BCC92AF4A2F0000B8DDC /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
+		7DA2BCC92AF4A2F0000B8DDC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7DA2BCCB2AF4A515000B8DDC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		7DFF7E4C2B63553B001B77B0 /* GCManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +65,9 @@
 		7D99E9E92AE43A2B005CADB4 /* PongWars */ = {
 			isa = PBXGroup;
 			children = (
+				7D4619812B1D13CD00B86725 /* PongWars.entitlements */,
 				7D99E9EA2AE43A2B005CADB4 /* PongWarsApp.swift */,
+				7DFF7E4B2B63551E001B77B0 /* GameCenter */,
 				7D99EA0A2AE43D1B005CADB4 /* Views */,
 				7D99EA092AE43D15005CADB4 /* Models */,
 				7D99E9EE2AE43A2C005CADB4 /* Assets.xcassets */,
@@ -90,10 +95,10 @@
 		7D99EA0A2AE43D1B005CADB4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7DFF7E4A2B635321001B77B0 /* Scenes */,
 				7D99E9EC2AE43A2B005CADB4 /* ContentView.swift */,
-				7DA2BCC92AF4A2F0000B8DDC /* PlayView.swift */,
+				7DA2BCC92AF4A2F0000B8DDC /* MainView.swift */,
 				7DA2BCCB2AF4A515000B8DDC /* SettingsView.swift */,
-				7D02291D2AE63DAE007D29D1 /* GameScene.swift */,
 				7D99EA112AE5B8BF005CADB4 /* Nodes */,
 			);
 			path = Views;
@@ -106,6 +111,22 @@
 				7D99EA132AE5B8CA005CADB4 /* PaddleNode.swift */,
 			);
 			path = Nodes;
+			sourceTree = "<group>";
+		};
+		7DFF7E4A2B635321001B77B0 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				7D02291D2AE63DAE007D29D1 /* PracticeScene.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		7DFF7E4B2B63551E001B77B0 /* GameCenter */ = {
+			isa = PBXGroup;
+			children = (
+				7DFF7E4C2B63553B001B77B0 /* GCManager.swift */,
+			);
+			path = GameCenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,11 +200,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DA2BCCC2AF4A515000B8DDC /* SettingsView.swift in Sources */,
-				7DA2BCCA2AF4A2F0000B8DDC /* PlayView.swift in Sources */,
-				7D02291E2AE63DAE007D29D1 /* GameScene.swift in Sources */,
+				7DA2BCCA2AF4A2F0000B8DDC /* MainView.swift in Sources */,
+				7D02291E2AE63DAE007D29D1 /* PracticeScene.swift in Sources */,
 				7D99EA142AE5CC1B005CADB4 /* PaddleNode.swift in Sources */,
 				7D99E9ED2AE43A2B005CADB4 /* ContentView.swift in Sources */,
 				7D99EA152AE5CC1E005CADB4 /* BallNode.swift in Sources */,
+				7DFF7E4D2B63553B001B77B0 /* GCManager.swift in Sources */,
 				7D99E9EB2AE43A2B005CADB4 /* PongWarsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,7 +265,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -300,7 +322,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -315,12 +337,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PongWars/PongWars.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PongWars/Preview Content\"";
 				DEVELOPMENT_TEAM = Z272JMU5D7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -344,12 +368,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PongWars/PongWars.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PongWars/Preview Content\"";
 				DEVELOPMENT_TEAM = Z272JMU5D7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

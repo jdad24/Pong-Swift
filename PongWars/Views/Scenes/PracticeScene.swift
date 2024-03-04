@@ -1,5 +1,5 @@
 //
-//  GameScene.swift
+//  PracticeScene.swift
 //  PongWars
 //
 //  Created by Joshua Dadson on 10/23/23.
@@ -14,7 +14,7 @@ enum NodeCategory: UInt32 {
     case border = 8
 }
 
-class GameScene: SKScene, SKPhysicsContactDelegate {
+class PracticeScene: SKScene, SKPhysicsContactDelegate {
     var player: PaddleNode!
     var enemy: PaddleNode!
     var ball: BallNode!
@@ -23,6 +23,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var enemyStartPosition: CGPoint!
     var ballStartPosition: CGPoint!
     
+    override func sceneDidLoad() {
+        scene?.backgroundColor = .black
+    }
+    
     override func didMove(to view: SKView) {
         self.size = CGSize(width: view.safeAreaLayoutGuide.layoutFrame.width, height: view.safeAreaLayoutGuide.layoutFrame.height)
         
@@ -30,15 +34,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         enemyStartPosition = CGPoint(x: self.size.width/2, y: self.size.height - 15)
         ballStartPosition = CGPoint(x: self.size.width/2, y: self.size.height/2)
         
-        player = PaddleNode(color: .blue, size: CGSize(width: (self.size.width)/3, height: self.size.height/30))
+        player = PaddleNode(color: .blue, size: CGSize(width: (self.size.width)/3, height: self.size.height/40))
         player.name = "Player"
         player.position = playerStartPosition
         
-        enemy = PaddleNode(color: .red, size:  CGSize(width: self.size.width/3, height: self.size.height/30))
+        enemy = PaddleNode(color: .red, size:  CGSize(width: self.size.width/3, height: self.size.height/40))
         enemy.name = "Enemy"
         enemy.position = enemyStartPosition
         
-        ball = BallNode(circleOfRadius: 25)
+        ball = BallNode(circleOfRadius: 20)
         ball.name = "Ball"
         ball.position = ballStartPosition
         
@@ -52,7 +56,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         physicsBody?.categoryBitMask = NodeCategory.border.rawValue
         physicsWorld.contactDelegate = self
         physicsBody?.contactTestBitMask = NodeCategory.player.rawValue
-        self.name = "scene"
+        self.name = "practice_scene"
         
         player.physicsBody?.categoryBitMask = NodeCategory.player.rawValue
         player.physicsBody?.collisionBitMask = NodeCategory.border.rawValue
@@ -65,7 +69,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         enemy.physicsBody?.categoryBitMask = NodeCategory.enemy.rawValue
         enemy.physicsBody?.collisionBitMask = NodeCategory.border.rawValue
         
-        ball.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 50))
+        ball.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 30))
         
         //Check if weak self is necessary
         Timer.scheduledTimer(withTimeInterval: 0.10, repeats: true) { [self]_ in
@@ -94,10 +98,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         ball.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
         ball.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 50))
-    }
-    
-    override func sceneDidLoad() {
-        scene?.backgroundColor = .black
     }
     
     
@@ -138,7 +138,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let nodeB = contact.bodyB.node
             
             let dxVal = Int.random(in: -50...50)
-            let dyVal = 70
+            let dyVal = 50
             
             if nodeA == player && nodeB == ball {
                 nodeB?.physicsBody?.velocity = CGVector(dx: 0, dy: 0)

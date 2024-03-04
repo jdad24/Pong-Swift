@@ -34,7 +34,7 @@ class BallNode: SKShapeNode {
         physicsBody?.affectedByGravity = false
         
         strokeColor = .white
-        fillColor = .orange
+        fillColor = .blue
     }
 
     required init?(coder aDecoder: NSCoder) {
